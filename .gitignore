@@ -1,18 +1,5 @@
-Debug
-Release
 
-.idea
-.Debug
-.Release
-
-x86.Debug
-x86.Release
-
-AnyCPU.Release
-AnyCPU.Debug
-
+NipaRMGManagement/obj
+NipaRMGManagement/bin
 *.suo
-
-obj
-bin
-
+*.csproj
