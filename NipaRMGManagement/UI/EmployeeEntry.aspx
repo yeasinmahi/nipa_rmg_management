@@ -6,27 +6,38 @@
             <legend>Employee Entry</legend>
 
             <div class="form-group col-sm-6" >
-                <label class="col-sm-12 control-label" for="lg">First Name</label>
+                <label class="col-sm-12 control-label" for="firstName">First Name</label>
                 <div class="col-sm-12">
-                    <input class="form-control" type="text" id="firstName" placeholder="First Name">
+                    <input class="form-control" type="text" id="firstName" name="firstName" placeholder="First Name">
                 </div>
             </div>
             <div class="form-group col-sm-6">
-                <label class="col-sm-12 control-label" for="lg">Last Name</label>
+                <label class="col-sm-12 control-label" for="lastName">Last Name</label>
                 <div class="col-sm-12">
-                    <input class="form-control" type="text" id="lastName" placeholder="Last Name">
+                    <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Last Name">
                 </div>
             </div>
             <div class="form-group col-sm-6" >
-                <label class="col-sm-12 control-label" for="lg">First Name</label>
+                <label class="col-sm-12 control-label" for="firstNameBangla">First Name(Bangla)</label>
                 <div class="col-sm-12">
-                    <input class="form-control" type="text" id="firstName" placeholder="First Name">
+                    <input class="form-control" type="text" id="firstNameBangla" name="firstNameBangla" placeholder="First Name">
                 </div>
             </div>
             <div class="form-group col-sm-6">
-                <label class="col-sm-12 control-label" for="lg">Last Name</label>
+                <label class="col-sm-12 control-label" for="lastNameBangla">Last Name(Bangla)</label>
                 <div class="col-sm-12">
-                    <input class="form-control" type="text" id="lastName" placeholder="Last Name">
+                    <input class="form-control" type="text" id="lastNameBangla" name="lastNameBangla" placeholder="Last Name">
+                </div>
+                <div class="form-group col-sm-6" >
+                <label class="col-sm-12 control-label" for="shortName">Sort Name</label>
+                <div class="col-sm-12">
+                    <input class="form-control" type="text" id="shortName" name="shortName" placeholder="Short Name">
+                </div>
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="col-sm-12 control-label" for="lastNameBangla">Last Name(Bangla)</label>
+                <div class="col-sm-12">
+                    <input class="form-control" type="text" id="lastNameBangla" name="lastNameBangla" placeholder="Last Name">
                 </div>
             </div>
         </fieldset>
