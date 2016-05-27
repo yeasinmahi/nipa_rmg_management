@@ -19,13 +19,12 @@
                     </div>
                 </div>
             </form>
-            <div class="form-group col-sm-6">
+            <div class="col-sm-6">
                 <div class="col-sm-12">
                     <asp:Button class="btn btn-default" ID="addButton" runat="server" Text="Add" OnClick="addButton_Click" />
                 </div>
             </div>
-            <div class="clear-fix"></div>
-            <div class="col-sm-12">
+            <div class="row">
                 <asp:GridView ID="designationGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
                     <Columns>
                         <asp:TemplateField HeaderText="SL#">
