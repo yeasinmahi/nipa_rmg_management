@@ -5,7 +5,7 @@ using System.Web;
 
 namespace NipaRMGManagement.Models
 {
-    public class EmployeeEntry
+    public class EmployeeEntries
     {
         public int EmpId { get; set; }
         public string EmployeeId { get; set; }
@@ -15,8 +15,8 @@ namespace NipaRMGManagement.Models
         public string LastName { get; set; }
         public string FirstNameBangla { get; set; }
         public string LastNameBangla { get; set; }
-        public string AdditionalId { get; set; }
         public string ShortName { get; set; }
+        public string AdditionalId { get; set; }
         public string FatherName { get; set; }
         public string MotherName { get; set; }
         public DateTime DateOfBirth { get; set; }
@@ -37,8 +37,8 @@ namespace NipaRMGManagement.Models
         public string PersonalEmail { get; set; }      
         public string AttendenceCardId { get; set; }
         public string FingerPrintId { get; set; }
-        public byte EmployeePic { get; set; }
-        public byte DigitalSignature { get; set; }
+        public byte[] EmployeePic { get; set; }
+        public byte[] DigitalSignature { get; set; }
 
 
 
