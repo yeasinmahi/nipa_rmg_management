@@ -1,70 +1,69 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UI/Site1.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="NipaRMGManagement.UI.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
-  .modal-header, h4, .close {
-      background-color: #778899;
-      color:white !important;
-      text-align: center;
-      font-size: 20px;
-  }
-  .modal-footer {
-      background-color: #778899;
-  }
-  </style>
+   <style>
+       body{
+    background-color: #525252
+    ;
+}
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+   </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
 
 <div class="container">
-  <h2>Employee Entry Form</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-default btn-lg" id="myBtn">Employee Entry</button>
+        <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Please sign up for Bootsnipp <small>It's free!</small></h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+								        <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name"/>
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+								        <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name"/>
+			    					</div>
+			    				</div>
+			    			</div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header" style="padding:35px 50px;">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
-        </div>
-        <div class="modal-body" style="padding:40px 50px;">
-      
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-                <input type="text" class="form-control" id="usrname" placeholder="Enter email"/>
-            </div>
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-                <input type="text" class="form-control" id="psw" placeholder="Enter password"/>
-            </div>
-            <div class="checkbox">
-              <label><input type="checkbox" value="" checked>Remember me</label>
-            </div>
-              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
-    
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-          <p>Not a member? <a href="#">Sign Up</a></p>
-          <p>Forgot <a href="#">Password?</a></p>
-        </div>
-      </div>
-      
+			    			<div class="form-group">
+						        <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address"/>
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+								        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password"/>
+			    					</div>
+			    				</div>
+			    			</div>
+
+						     <input type="submit" value="Register" class="btn btn-info btn-block"/>
+			    		
+			    		
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
     </div>
-  </div> 
-</div>
- 
-<script>
-    $(document).ready(function () {
-        $("#myBtn").click(function () {
-            $("#myModal").modal();
-        });
-    });
-</script>
-
-
 
 </asp:Content>
