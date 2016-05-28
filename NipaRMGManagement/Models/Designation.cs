@@ -5,6 +5,7 @@ using System.Web;
 
 namespace NipaRMGManagement.Models
 {
+    [Serializable]
     public class Designation
     {
         public int DesignationId { get; set; }

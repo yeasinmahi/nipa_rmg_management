@@ -13,22 +13,31 @@ namespace NipaRMGManagement.UI
     public partial class DesignationControl : System.Web.UI.Page
     {
 
-        private Designation designation;
-        private List<Designation> designations = new List<Designation>(); 
+        private Designation _designation;
+        private  List<Designation> _designations; 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+            if (ViewState["designationList"]!=null)
+            {
+                _designations = (List<Designation>) ViewState["designationList"];
+            }
+            else
+            {
+                _designations = new List<Designation>();
+            }
         }
 
         protected void addButton_Click(object sender, EventArgs e)
         {
-            designation = CreateDesignationModel();
-            if (designation!=null)
+            _designation = CreateDesignationModel();
+            if (_designation!=null)
             {
-                designations.Add(designation);
+                _designations.Add(_designation);
+                ViewState["designationList"] = _designations;
             }
             
-            designationGridView.DataSource = designations;
+            designationGridView.DataSource = _designations;
             designationGridView.DataBind();
         }
 
