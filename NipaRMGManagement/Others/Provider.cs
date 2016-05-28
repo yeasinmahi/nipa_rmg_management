@@ -11,7 +11,7 @@ namespace NipaRMGManagement.Others
         public static int ConvanceSupport = 200;
         public static int FoodSupport = 650;
 
-        private static int Others = MedicalSupport + ConvanceSupport + FoodSupport;
+        private static readonly int Others = MedicalSupport + ConvanceSupport + FoodSupport;
         public static int GetBasicSalary(int gross)
         {
             return (int) Math.Round(((gross - Others)/1.4), 0);

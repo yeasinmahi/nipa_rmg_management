@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EmployeeEntry.aspx.cs" Inherits="NipaRMGManagement.UI.EmployeeEntry" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
-    
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div>
@@ -25,7 +24,12 @@
                     <input class="form-control" type="text" id="designation" name="designation" placeholder="Designation">
                 </div>
             </div>
-
+            <div class="form-group col-sm-6">
+                <label class="col-sm-12 control-label" for="additionalId">Additional Id</label>
+                <div class="col-sm-12">
+                    <input class="form-control" type="text" id="additionalId" name="additionalId" placeholder="Additional Id">
+                </div>
+            </div>
             <div class="form-group col-sm-6">
                 <label class="col-sm-12 control-label" for="firstName">First Name</label>
                 <div class="col-sm-12">
@@ -56,12 +60,7 @@
                     <input class="form-control" type="text" id="shortName" name="shortName" placeholder="Short Name">
                 </div>
             </div>
-            <div class="form-group col-sm-6">
-                <label class="col-sm-12 control-label" for="additionalId">Additional Id</label>
-                <div class="col-sm-12">
-                    <input class="form-control" type="text" id="additionalId" name="additionalId" placeholder="Additional Id">
-                </div>
-            </div>
+            
             <div class="form-group col-sm-6">
                 <label class="col-sm-12 control-label" for="fathersName">Father's Name</label>
                 <div class="col-sm-12">
@@ -74,42 +73,6 @@
                     <input class="form-control" type="text" id="mothersName" name="mothersName" placeholder="Mother's Name ">
                 </div>
             </div>
-
-<<<<<<< HEAD
-            <div class="form-group col-sm-6" >
-                <label class="col-sm-12 control-label" for="firstName">First Name</label>
-                <div class="col-sm-12">
-                    <input class="form-control" type="text" id="firstName" name="firstName" placeholder="First Name">
-                </div>
-            </div>
-            <div class="form-group col-sm-6">
-                <label class="col-sm-12 control-label" for="lastName">Last Name</label>
-                <div class="col-sm-12">
-                    <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Last Name">
-                </div>
-            </div>
-            <div class="form-group col-sm-6" >
-                <label class="col-sm-12 control-label" for="firstNameBangla">First Name(Bangla)</label>
-                <div class="col-sm-12">
-                    <input class="form-control" type="text" id="firstNameBangla" name="firstNameBangla" placeholder="First Name">
-                </div>
-            </div>
-            <div class="form-group col-sm-6">
-                <label class="col-sm-12 control-label" for="lastNameBangla">Last Name(Bangla)</label>
-                <div class="col-sm-12">
-                    <input class="form-control" type="text" id="lastNameBangla" name="lastNameBangla" placeholder="Last Name">
-                </div>
-                <div class="form-group col-sm-6" >
-                <label class="col-sm-12 control-label" for="shortName">Sort Name</label>
-                <div class="col-sm-12">
-                    <input class="form-control" type="text" id="shortName" name="shortName" placeholder="Short Name">
-                </div>
-            </div>
-            <div class="form-group col-sm-6">
-                <label class="col-sm-12 control-label" for="lastNameBangla">Last Name(Bangla)</label>
-                <div class="col-sm-12">
-                    <input class="form-control" type="text" id="lastNameBangla" name="lastNameBangla" placeholder="Last Name">
-=======
             <div class="form-group col-sm-6">
                 <label class="col-sm-12 control-label" for="dateOfBirth">Date OfBirth </label>
                 <div class="col-sm-12">
@@ -150,7 +113,6 @@
                 <label class="col-sm-12 control-label" for="religion">Religion</label>
                 <div class="col-sm-12">
                     <input class="form-control" type="text" id="religion" name="religion" placeholder="Religion">
->>>>>>> 6d133e64cd6c8466632d428a10bc407bfcee32da
                 </div>
             </div>
             <div class="form-group col-sm-6">
@@ -229,18 +191,17 @@
             <div class="form-group col-sm-6">
                 <label class="col-sm-12 control-label" for="digitalSignature">Digital Signature</label>
                 <div class="col-sm-12">
-                    <asp:FileUpload ID="digitalSignature"  runat="server" />
+                    <asp:FileUpload ID="digitalSignature" runat="server" />
 
                 </div>
             </div>
-             <div class="form-group col-sm-6">
-                
+            <div class="form-group col-sm-6">
+
                 <div class="col-sm-12">
-                    <asp:Button type="submit" id="SaveEmployee" Text="Save" runat="server" OnClick="SaveEmployee_Click"/>
+                    <asp:Button type="submit" ID="SaveEmployee" Text="Save" runat="server" OnClick="SaveEmployee_Click" />
 
                 </div>
             </div>
-
         </fieldset>
     </div>
 </asp:Content>

@@ -34,6 +34,10 @@ namespace NipaRMGManagement
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
+            //my customize script bundle
+            bundles.Add(new ScriptBundle("~/bundles/myScript").Include(
+                            "~/Scripts/avro-v1.1.4.min.js," +
+                            "jquery-*"));
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",
