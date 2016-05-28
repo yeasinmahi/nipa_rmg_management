@@ -4,28 +4,32 @@
     <div>
         <fieldset>
             <legend>Designation Control</legend>
-            <form class="cmxform" id="commentForm" method="get" action="">
+            <div>
+                <form class="cmxform" id="commentForm" method="get" action="">
 
-                <div class="form-group col-sm-6">
-                    <label class="col-sm-12 control-label" for="designationName">Designation Name</label>
-                    <div class="col-sm-12">
-                        <input class="form-control" type="text" id="designationName" name="designationName" placeholder="Designation Name">
+                    <div class="form-group col-sm-6">
+                        <label class="col-sm-12 control-label" for="designationName">Designation Name</label>
+                        <div class="col-sm-12">
+                            <input class="form-control" type="text" id="designationName" name="designationName" placeholder="Designation Name">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group col-sm-6">
-                    <label class="col-sm-12 control-label" for="grossSalary">Gross Salary</label>
-                    <div class="col-sm-12">
-                        <input class="form-control" type="text" id="grossSalary" name="grossSalary" placeholder="Gross Salary">
+                    <div class="form-group col-sm-6">
+                        <label class="col-sm-12 control-label" for="grossSalary">Gross Salary</label>
+                        <div class="col-sm-12">
+                            <input class="form-control" type="text" id="grossSalary" name="grossSalary" placeholder="Gross Salary">
+                        </div>
                     </div>
-                </div>
-            </form>
-            <div class="col-sm-6">
-                <div class="col-sm-12">
-                    <asp:Button class="btn btn-default" ID="addButton" runat="server" Text="Add" OnClick="addButton_Click" />
+                </form>
+                <div class="form-group col-sm-7">
+                    <div class="col-sm-12">
+                        <asp:Button class="btn btn-default" ID="addButton" runat="server" Text="Add" OnClick="addButton_Click" />
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <asp:GridView ID="designationGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
+
+
+            <div class="text-center">
+                <asp:GridView ID="designationGridView" runat="server" CellPadding="10" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
                     <Columns>
                         <asp:TemplateField HeaderText="SL#">
                             <ItemTemplate>
