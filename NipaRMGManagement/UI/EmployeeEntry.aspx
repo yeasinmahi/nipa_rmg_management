@@ -1,16 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EmployeeEntry.aspx.cs" Inherits="NipaRMGManagement.UI.EmployeeEntry" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <script src="../Scripts/myValidate.js"></script>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div>
         <fieldset>
             <legend>Employee Entry</legend>
+
             <div class="form-group col-sm-6">
                 <label class="col-sm-12 control-label" for="employeeId">Employee Id</label>
-                <div class="col-sm-12">
+                <div class="col-sm-6">
                     <input class="form-control" type="text" id="employeeId" name="employeeId" placeholder="Employee Id">
                 </div>
+                <div class="col-sm-6 messageContainer text-danger" id="employeeIdError"></div>
             </div>
             <div class="form-group col-sm-6">
                 <label class="col-sm-12 control-label" for="department">Department</label>
@@ -60,7 +63,7 @@
                     <input class="form-control" type="text" id="shortName" name="shortName" placeholder="Short Name">
                 </div>
             </div>
-            
+
             <div class="form-group col-sm-6">
                 <label class="col-sm-12 control-label" for="fathersName">Father's Name</label>
                 <div class="col-sm-12">
@@ -198,7 +201,7 @@
             <div class="form-group col-sm-6">
 
                 <div class="col-sm-12">
-                    <asp:Button type="submit" ID="SaveEmployee" Text="Save" runat="server" OnClick="SaveEmployee_Click" />
+                    <asp:Button type="submit" ID="SaveEmployee" Text="Save" runat="server" OnClientClick="return userValid()" OnClick="SaveEmployee_Click" />
 
                 </div>
             </div>
