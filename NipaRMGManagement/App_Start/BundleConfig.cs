@@ -20,7 +20,8 @@ namespace NipaRMGManagement
                             "~/Scripts/WebForms/GridView.js",
                             "~/Scripts/WebForms/DetailsView.js",
                             "~/Scripts/WebForms/TreeView.js",
-                            "~/Scripts/WebForms/WebParts.js"));
+                            "~/Scripts/WebForms/WebParts.js"
+                           ));
 
             // Order is very important for these files to work, they have explicit dependencies
             bundles.Add(new ScriptBundle("~/bundles/MsAjaxJs").Include(
@@ -33,6 +34,11 @@ namespace NipaRMGManagement
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
+            //my customize script bundle
+            bundles.Add(new ScriptBundle("~/bundles/myScript").Include(
+                            "~/Scripts/jquery-1.10.2.js",
+                            "~/Scripts/avro-v1.1.4.min.js",
+                            "~/Scripts/jquery.validate.js"));
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",
