@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.Ajax.Utilities;
+using NipaRMGManagement.BLL;
 using NipaRMGManagement.Models;
 using NipaRMGManagement.Others;
 
@@ -12,32 +13,32 @@ namespace NipaRMGManagement.UI
 {
     public partial class DesignationControl : System.Web.UI.Page
     {
-
+        
         private Designation _designation;
-        private  List<Designation> _designations; 
+        private  List<Designation> _designations;
+        private readonly DesignationControlManager _designationControlManager = new DesignationControlManager();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if (ViewState["designationList"]!=null)
+            if (!IsPostBack)
             {
-                _designations = (List<Designation>) ViewState["designationList"];
+                if (Session["login"] == null)
+                {
+                    Response.Redirect("~/UI/LoginForm.aspx", false);
+                    HttpContext.Current.ApplicationInstance.CompleteRequest();
+                }
             }
-            else
-            {
-                _designations = new List<Designation>();
-            }
+            designationGridView.DataSource = _designationControlManager.GetAllDesignation();
+            designationGridView.DataBind();
         }
 
         protected void addButton_Click(object sender, EventArgs e)
         {
             _designation = CreateDesignationModel();
-            if (_designation!=null)
-            {
-                _designations.Add(_designation);
-                ViewState["designationList"] = _designations;
-            }
-            
-            designationGridView.DataSource = _designations;
+
+            bool isSave=_designationControlManager.SaveDesignation(_designation);
+            successMessage.Text = isSave ? "<b><p style=color:green>successfully saved</p></b>" : "<b><p style=color:red>Designation can not saved</p></b>";
+
+            designationGridView.DataSource = _designationControlManager.GetAllDesignation();
             designationGridView.DataBind();
         }
 

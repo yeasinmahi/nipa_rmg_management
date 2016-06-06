@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DesignationControl.aspx.cs" Inherits="NipaRMGManagement.UI.DesignationControl" %>
+﻿<%@ Page Title="Designation Entry" EnableEventValidation="false" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DesignationControl.aspx.cs" Inherits="NipaRMGManagement.UI.DesignationControl" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div>
@@ -6,7 +6,9 @@
             <legend>Designation Control</legend>
             <div>
                 <form class="cmxform" id="commentForm" method="get" action="">
-
+                    <div class="form-group text-center col-sm-12">
+                        <asp:Literal ID="successMessage" runat="server"></asp:Literal>
+                    </div>
                     <div class="form-group col-sm-6">
                         <label class="col-sm-12 control-label" for="designationName">Designation Name</label>
                         <div class="col-sm-12">
@@ -20,16 +22,20 @@
                         </div>
                     </div>
                 </form>
-                <div class="form-group col-sm-7">
+                <div class="form-group col-lg-12">
                     <div class="col-sm-12">
-                        <asp:Button class="btn btn-default" ID="addButton" runat="server" Text="Add" OnClick="addButton_Click" />
+                        <asp:Button class="btn btn-default" ID="addButton" runat="server" Text="Save" OnClick="addButton_Click" />
                     </div>
                 </div>
             </div>
+            <style>
+                #MainContent_designationGridView td,#MainContent_designationGridView th{
+                    padding: 10px 0;
+                }
+            </style>
 
-
-            <div class="text-center">
-                <asp:GridView ID="designationGridView" runat="server" CellPadding="10" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
+            <div class="">
+                <asp:GridView ID="designationGridView" runat="server" CellPadding="10"  ForeColor="#333333" GridLines="None" AutoGenerateColumns="False"  Width="100%">
                     <Columns>
                         <asp:TemplateField HeaderText="SL#">
                             <ItemTemplate>

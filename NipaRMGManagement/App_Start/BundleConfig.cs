@@ -37,8 +37,11 @@ namespace NipaRMGManagement
             //my customize script bundle
             bundles.Add(new ScriptBundle("~/bundles/myScript").Include(
                             "~/Scripts/jquery-1.10.2.js",
+                            "~/Scripts/jquery.validate.js",
+                            "~/Scripts/bootstrap-datepicker.js",
                             "~/Scripts/avro-v1.1.4.min.js",
-                            "~/Scripts/jquery.validate.js"));
+                            "~/Scripts/fileinput.js",
+                            "~/Scripts/myValidate.js"));
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",

@@ -68,12 +68,30 @@ namespace NipaRMGManagement
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+            if (Session["login"]!=null)
+            {
+                logout.Visible = true;
+                login.Visible = false;
+            }
+            else
+            {
+                login.Visible = true;
+                logout.Visible = false;
+            }
+            
         }
 
+        
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut();
+        }
+
+        protected void logout_OnClick(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("~/UI/LoginForm.aspx");
         }
     }
 
